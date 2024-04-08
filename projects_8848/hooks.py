@@ -5,6 +5,8 @@ app_description = "projects_8848"
 app_email = "shyamkumar@8848digital.com"
 app_license = "MIT"
 
+
+
 # Includes in <head>
 # ------------------
 
@@ -24,10 +26,13 @@ app_license = "MIT"
 # webform_include_css = {"doctype": "public/css/doctype.css"}
 
 # include js in page
-# page_js = {"page" : "public/js/file.js"}
+# page_js = {"page" : "projects_8848/public/js/task_tree.js"}
+
+
 
 # include js in doctype views
 # doctype_js = {"doctype" : "public/js/doctype.js"}
+
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
@@ -178,7 +183,7 @@ app_license = "MIT"
 # before_request = ["projects_8848.utils.before_request"]
 # after_request = ["projects_8848.utils.after_request"]
 
-# Job Events
+# Job Eventsprojects_8848
 # ----------
 # before_job = ["projects_8848.utils.before_job"]
 # after_job = ["projects_8848.utils.after_job"]
@@ -213,3 +218,17 @@ app_license = "MIT"
 # auth_hooks = [
 # 	"projects_8848.auth.validate"
 # ]
+
+
+
+
+doctype_tree_js = {"Task" : "public/js/task_tree.js"}
+doc_events = {
+	"Task": {
+		"validate": "projects_8848.customizations.task_tree.doc_events.task_tree.progress_calculation",
+		
+	}
+}
+
+
+
